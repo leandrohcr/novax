@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -10 540 120" role="img" aria-labelledby="t">
+  <title id="t">NOVA X</title>
+  <g fill="#0D0D12">
+    <!-- N -->
+    <path d="M0 0h20l44 66V0h20v100H64L20 34v66H0z"/>
+    <!-- O -->
+    <path fill-rule="evenodd" d="M146 0a48 50 0 1 1 0 100a48 50 0 1 1 0-100zm0 19a28 31 0 1 0 0 62a28 31 0 1 0 0-62z"/>
+    <!-- V -->
+    <path d="M206 0h21l25 72 25-72h21l-36 100h-20z"/>
+    <!-- A -->
+    <path fill-rule="evenodd" d="M340 0h20l36 100h-21l-8-23h-34l-8 23h-21zm10 27-11 33h22z"/>
+  </g>
+  <!-- X: estrela nova -->
+  <path fill="#FF5B1F" transform="translate(478 50) rotate(45)" d="M0-72C6-13 13-6 72 0C13 6 6 13 0 72C-6 13-13 6-72 0C-13-6-6-13 0-72z"/>
+</svg>
