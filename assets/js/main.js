@@ -4,10 +4,10 @@
 // =====================================================================
 const CONTATO = {
   whatsapp: "5531990025569",
-  email: "",
-  instagram: "", // só o usuário, sem @
-  razaoSocial: "", // aparece no rodapé, ex.: "NOVA X Marketing Digital LTDA"
-  cnpj: "",
+  email: "atendimento@agencianovax.com.br",
+  instagram: "agencianovaxbr", // só o usuário, sem @
+  razaoSocial: "NOVA X PARTICIPACOES LTDA", // aparece no rodapé, ex.: "NOVA X Marketing Digital LTDA"
+  cnpj: "61.642.125/0001-00",
 };
 
 (function () {
