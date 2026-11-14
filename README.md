@@ -32,25 +32,33 @@ const CONTATO = {
 
 Com o WhatsApp preenchido, o formulário de diagnóstico abre uma conversa com as respostas já escritas. Sem WhatsApp, ele usa o e-mail. O site não guarda nenhum dado.
 
-## Como publicar no GitHub Pages (grátis)
+## Como publicar em www.agencianovax.com.br (grátis)
 
+O site fica hospedado no GitHub Pages. O domínio continua na GoDaddy; só os registros de DNS mudam. O arquivo `CNAME` na raiz do repositório já diz ao GitHub qual é o domínio.
+
+### 1. GitHub: publicar
 1. Junte (merge) o pull request na branch `main`.
-2. No GitHub, abra o repositório e vá em **Settings → Pages**.
-3. Em **Build and deployment**, escolha **Source: Deploy from a branch**, branch **main**, pasta **/ (root)** e clique em **Save**.
-4. Em 1 a 2 minutos o site fica no ar em `https://leandrohcr.github.io/novax/`.
+2. Em **Settings → Pages**, escolha **Source: Deploy from a branch**, branch **main**, pasta **/ (root)** e clique em **Save**.
+3. No campo **Custom domain**, confira se aparece `www.agencianovax.com.br` (se estiver vazio, digite e clique em **Save**).
+
+### 2. GoDaddy: apontar o domínio
+Em **Meus produtos → agencianovax.com.br → DNS** (Gerenciar DNS):
+
+1. Desligue qualquer **Encaminhamento (Forwarding)** do domínio e apague o registro `A` do `@` que aponta para "Parked" ou para outro IP.
+2. Crie 4 registros `A`, nome `@`, TTL padrão:
+   `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+3. Edite (ou crie) o registro `CNAME` de nome `www` com valor `leandrohcr.github.io`.
+4. Não mexa em registros `MX` ou `TXT` de e-mail, se existirem.
+
+> Se a página de DNS da GoDaddy disser que os nameservers não são da GoDaddy, os registros precisam ser criados onde o DNS está (por exemplo, no Registro.br).
+
+### 3. HTTPS
+Depois que o DNS propagar (de minutos a algumas horas), volte em **Settings → Pages**. Quando aparecer "DNS check successful", marque **Enforce HTTPS**. O certificado é gratuito e pode levar até 1 hora para sair.
+
+### 4. Opcional: proteger o domínio
+Em **github.com → foto → Settings → Pages → Add a domain**, digite `agencianovax.com.br`. O GitHub mostra um registro `TXT` para criar na GoDaddy. Isso impede que outra conta do GitHub use o domínio.
 
 Toda alteração enviada para `main` é publicada sozinha.
-
-> Repositório privado só publica no Pages em plano pago do GitHub. Com o repositório público, o Pages é gratuito.
-
-## Quando tiver domínio próprio
-
-1. Compre o domínio (ex.: `novax.com.br` no Registro.br, cerca de R$ 40 por ano).
-2. Em **Settings → Pages → Custom domain**, digite o domínio e salve. Marque **Enforce HTTPS** quando liberar.
-3. No Registro.br, crie os registros DNS:
-   - 4 registros `A` para `@`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - 1 registro `CNAME` para `www` apontando para `leandrohcr.github.io`
-4. Em `index.html`, troque o endereço da `og:image` para o novo domínio.
 
 ## Itens para completar
 
