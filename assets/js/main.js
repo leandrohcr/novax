@@ -3,7 +3,7 @@
 // whatsapp: só números, com DDI e DDD. Ex.: "5531999998888"
 // =====================================================================
 const CONTATO = {
-  whatsapp: "",
+  whatsapp: "5531990025569",
   email: "",
   instagram: "", // só o usuário, sem @
   razaoSocial: "", // aparece no rodapé, ex.: "NOVA X Marketing Digital LTDA"

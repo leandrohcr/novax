@@ -54,7 +54,8 @@ Toda alteração enviada para `main` é publicada sozinha.
 
 ## Itens para completar
 
-- [ ] Contatos no `main.js` (WhatsApp, e-mail, Instagram, razão social e CNPJ)
+- [x] WhatsApp no `main.js`
+- [ ] E-mail, Instagram, razão social e CNPJ no `main.js`
 - [ ] Foto do Thales: salvar em `assets/img/thales.jpg` e trocar o `<div class="pessoa__foto">` por `<img class="pessoa__foto" src="assets/img/thales.jpg" alt="Thales">`
 - [ ] Bio do Thales com 1 ou 2 números reais de lançamentos
 - [ ] Case de cliente (com autorização por escrito do expert) quando houver
