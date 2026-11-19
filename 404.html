@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página não encontrada | NOVA X</title>
+  <meta name="robots" content="noindex">
+  <style>
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #0D0D12; color: #F4F1EA; font: 17px/1.6 system-ui, sans-serif; text-align: center; padding: 16px; }
+    h1 { font-size: clamp(2rem, 6vw, 3rem); margin: .4em 0; letter-spacing: -0.02em; }
+    p { color: #A4A3B3; }
+    a { display: inline-block; margin-top: 16px; background: #FF5B1F; color: #fff; text-decoration: none; font-weight: 600; padding: .9em 1.4em; border-radius: 999px; }
+    svg { width: 64px; height: 64px; }
+  </style>
+</head>
+<body>
+  <main>
+    <svg viewBox="-52 -52 104 104" aria-hidden="true"><path fill="#FF5B1F" transform="rotate(45)" d="M0-72C6-13 13-6 72 0C13 6 6 13 0 72C-6 13-13 6-72 0C-13-6-6-13 0-72z"/></svg>
+    <h1>Essa página não existe.</h1>
+    <p>Talvez o link esteja errado ou a página tenha mudado de lugar.</p>
+    <a id="inicio" href="/">Voltar para o início</a>
+  </main>
+  <script>
+    // No GitHub Pages sem domínio próprio o site fica em /novax/
+    if (location.hostname.endsWith("github.io")) {
+      var base = location.pathname.split("/")[1];
+      if (base) document.getElementById("inicio").href = "/" + base + "/";
+    }
+  </script>
+</body>
+</html>
